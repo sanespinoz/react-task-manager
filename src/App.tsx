@@ -90,16 +90,6 @@ function App() {
   const completedTasks = tasks.filter((task) => task.completed).length;
   const pendingTasks = totalTasks - completedTasks;
 
-  //Agregado para evitar repetición de estilos en los botones de filtro y hover
-  const getButtonStyle = (value: Filter) => ({
-    padding: '6px 10px',
-    borderRadius: 6,
-    border: '1px solid #ccc',
-    backgroundColor: filter === value ? '#333' : '#fff',
-    color: filter === value ? '#fff' : '#000',
-    cursor: 'pointer',
-    transition: '0.2s',
-  });
 
   if (loading) {
     return (
